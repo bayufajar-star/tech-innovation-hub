@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovation Hub - Portal Teknologi Modern</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo" onclick="navigateTo('home')">
+                <svg class="logo-icon" viewbox="0 0 100 100" fill="white">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="3" />
+                    <path d="M30 50 L45 35 L45 65 Z" fill="white" />
+                    <rect x="50" y="35" width="20" height="30" fill="white" />
+                </svg>
+                <span id="site-title">Tech Innovation Hub</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><button onclick="navigateTo('home')">Home</button></li>
+                    <li><button onclick="scrollToSection('dashboard')">Dashboard</button></li>
+                    <li><button onclick="navigateTo('gallery')">Detail Galeri</button></li>
+                    <li><button onclick="navigateTo('form')">Daftar</button></li>
+                    <li><button onclick="scrollToSection('contact')">Kontak</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="homePage" class="page active">
+        <section id="home" class="hero video-hero">
+            <video autoplay muted loop playsinline webkit-playsinline class="back-video">
+                <source src="video/background.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Selamat Datang di Era Digital</h1>
+                <p id="tagline">Inovasi Teknologi untuk Masa Depan yang Lebih Cerah</p>
+                <button class="cta-button" onclick="scrollToSection('dashboard')">Jelajahi Sekarang</button>
+            </div>
+        </section>
+
+        <section id="dashboard" class="dashboard">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Dashboard Statistik</h2>
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <img src="icon/computer.png" alt="Ikon" class="custom-stat-icon">
+                        </div>
+                        <div class="stat-number" data-target="1250">0</div>
+                        <div class="stat-label">Proyek Selesai</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <img src="icon/group.png" alt="Ikon" class="custom-stat-icon">
+                        </div>
+                        <div class="stat-number" data-target="850">0</div>
+                        <div class="stat-label">Klien Puas</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <img src="icon/project-management.png" alt="Ikon" class="custom-stat-icon">
+                        </div>
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">Teknologi Terbaru</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <img src="icon/star.png" alt="Ikon" class="custom-stat-icon">
+                        </div>
+                        <div class="stat-number" data-target="4.9">0</div>
+                        <div class="stat-label">Rating Pengguna</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery-preview" class="gallery">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Sekilas Teknologi</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="navigateTo('gallery')" data-aos="zoom-in">
+                        <div class="gallery-image">
+                            <img src="image/Artifical_intelligence.jpg" alt="AI">
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Artificial Intelligence</h3>
+                            <p>Klik untuk detail selengkapnya</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="navigateTo('gallery')" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="gallery-image">
+                            <img src="image/Cloud_Computing.jpg" alt="Cloud">
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Cloud Computing</h3>
+                            <p>Klik untuk detail selengkapnya</p>
+                        </div>
+                    </div>
+                     <div class="gallery-item" onclick="navigateTo('gallery')" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="gallery-image">
+                            <img src="image/Cyber_Security.jpg" alt="Security">
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Cyber Security</h3>
+                            <p>Klik untuk detail selengkapnya</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button" onclick="navigateTo('gallery')">Lihat Semua Galeri</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-info">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-down">Hubungi Kami</h2>
+                <div class="contact-grid">
+                    <div class="contact-details" data-aos="fade-right">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="icon/communication.png" alt="Email" class="custom-contact-icon">
+                            </div>
+                            <h3>Email</h3>
+                            <p id="contact-email">info@techinnovation.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="icon/chat1.png" alt="Telepon" class="custom-contact-icon">
+                            </div>
+                            <h3>Telepon</h3>
+                            <p id="contact-phone">+62 813 1020 4623</p>
+                        </div>
+                         <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="icon/map.png" alt="Alamat" class="custom-contact-icon">
+                            </div>
+                            <h3>Alamat</h3>
+                            <p id="contact-address">Jl. Swadarma Raya No.58<br>Jakarta Selatan</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="icon/clock.png" alt="Jam" class="custom-contact-icon">
+                            </div>
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat : 09:00 - 18:00</p>
+                            <p>Sabtu : 09:00 - 14:00</p>
+                        </div>
+                    </div>
+                    <div class="map-container" data-aos="fade-left">
+                        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2551977333965!2d106.75826387590658!3d-6.230048993758075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1f55c77145d%3A0x1e2ed99435c9cd21!2sTANRI%20ABENG%20UNIVERSITY!5e0!3m2!1sid!2sid!4v1763908764476!5m2!1sid!2sid" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="galleryPage" class="page">
+        <section class="hero" style="padding-top: 120px; min-height: 40vh;">
+            <h1>Eksplorasi Teknologi</h1>
+            <p>Pembahasan mendalam tentang pilar teknologi kami</p>
+        </section>
+        
+        <section class="gallery-detail-section">
+            <div class="container">
+                <div class="detail-item" data-aos="fade-right">
+                    <div class="detail-img">
+                         <img src="image/Artifical_intelligence.jpg" alt="Artificial Intelligence">
+                    </div>
+                    <div class="detail-text">
+                        <h3>Artificial Intelligence (AI)</h3>
+                        <p>Kecerdasan Buatan mengubah cara kita menyelesaikan masalah kompleks. Layanan kami mencakup:</p>
+                        <ul>
+                            <li><strong>Machine Learning:</strong> Algoritma yang belajar dari data untuk prediksi akurat.</li>
+                            <li><strong>Natural Language Processing (NLP):</strong> Chatbot cerdas dan analisis sentimen.</li>
+                            <li><strong>Computer Vision:</strong> Pengenalan objek dan wajah untuk keamanan.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="detail-item reverse" data-aos="fade-left">
+                    <div class="detail-text">
+                        <h3>Cloud Computing</h3>
+                        <p>Infrastruktur fleksibel tanpa biaya hardware yang mahal. Solusi kami meliputi:</p>
+                        <ul>
+                            <li><strong>Hybrid Cloud:</strong> Integrasi on-premise dan public cloud.</li>
+                            <li><strong>Serverless Architecture:</strong> Fokus pada kode, bukan manajemen server.</li>
+                            <li><strong>Data Backup & Recovery:</strong> Keamanan data tingkat tinggi.</li>
+                        </ul>
+                    </div>
+                    <div class="detail-img">
+                         <img src="image/Cloud_Computing.jpg" alt="Cloud Computing">
+                    </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-right">
+                    <div class="detail-img">
+                         <img src="image/Cyber_Security.jpg" alt="Cyber Security">
+                    </div>
+                    <div class="detail-text">
+                        <h3>Cyber Security</h3>
+                        <p>Perlindungan total terhadap aset digital Anda dari ancaman siber:</p>
+                        <ul>
+                            <li><strong>Penetration Testing:</strong> Menguji celah keamanan sebelum diretas.</li>
+                            <li><strong>Endpoint Protection:</strong> Mengamankan setiap perangkat yang terhubung.</li>
+                            <li><strong>Data Encryption:</strong> Standar enkripsi militer untuk data sensitif.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                 <div class="detail-item reverse" data-aos="fade-left">
+                    <div class="detail-text">
+                        <h3>App & Web Development</h3>
+                        <p>Membangun kehadiran digital yang kuat dan responsif:</p>
+                        <ul>
+                            <li><strong>Progressive Web Apps (PWA):</strong> Website dengan rasa aplikasi native.</li>
+                            <li><strong>Cross-Platform Mobile:</strong> Satu kode untuk iOS dan Android.</li>
+                            <li><strong>UI/UX Design:</strong> Desain antarmuka yang memikat pengguna.</li>
+                        </ul>
+                    </div>
+                    <div class="detail-img">
+                         <img src="image/Web_Development.jpg" alt="Web Development">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="formPage" class="page">
+        <section class="hero form-hero" style="padding-top: 120px; min-height: 40vh;">
+            <h1>Bergabung Bersama Kami</h1>
+            <p>Mulai perjalanan transformasi digital Anda hari ini</p>
+        </section>
+
+        <section class="form-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0 , 0, 0, 0.7)), url('image/bg-tech.jpg'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="form-card" data-aos="zoom-in-up">
+                    <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+                        <h2 class="form-title">Formulir Pendaftaran</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" required placeholder="Masukkan nama lengkap Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" required placeholder="contoh@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" required placeholder="+62 8xx xxxx xxxx">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">Minat Layanan</label>
+                            <div class="select-wrapper">
+                                <select id="interest" required>
+                                    <option value="" disabled selected>Pilih layanan yang diminati</option>
+                                    <option value="AI">Artificial Intelligence</option>
+                                    <option value="Cloud">Cloud Computing</option>
+                                    <option value="Security">Cyber Security</option>
+                                    <option value="Mobile">Mobile Development</option>
+                                    <option value="Web">Web Development</option>
+                                    <option value="Data">Data Analytics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan Tambahan (Opsional)</label>
+                            <textarea id="message" rows="4" placeholder="Ceritakan kebutuhan spesifik Anda..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Kirim Pendaftaran
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <button onclick="navigateTo('home')">Home</button> 
+                <button onclick="scrollToSection('dashboard')">Dashboard</button> 
+                <button onclick="navigateTo('gallery')">Galeri Detail</button> 
+                <button onclick="navigateTo('form')">Daftar</button>
+                <button onclick="scrollToSection('contact')">Kontak</button>
+            </div>
+            <p class="copyright" id="footer-text">©Bayu Fajar Pamungkas. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+    <script>
+  window.addEventListener('mouseover', initLandbot, { once: true });
+  window.addEventListener('touchstart', initLandbot, { once: true });
+  var myLandbot;
+  function initLandbot() {
+    if (!myLandbot) {
+      var s = document.createElement('script');
+      s.type = "module"
+      s.async = true;
+      s.addEventListener('load', function() {
+        var myLandbot = new Landbot.Livechat({
+          configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3303322-G2C0E3KYI95ELZJA/index.json',
+        });
+      });
+      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  }
+</script>
+
+    </body>
+</html>
